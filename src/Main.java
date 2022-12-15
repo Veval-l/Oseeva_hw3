@@ -21,11 +21,11 @@ public class Main {
         short money = 27897;
         byte oil = 67;
 
-        byte teacherLP = 23;
+        int teacherLP = 23;
         System.out.println("У Людмилы Павловны " + teacherLP + " ученика");
-        byte teacherAS = 27;
+        int teacherAS = 27;
         System.out.println("У Анны Сергеевны " + teacherAS + " ученика");
-        byte teacherEA = 30;
+        int teacherEA = 30;
         System.out.println("У Екатеины Андреевны " + teacherEA + " ученика");
         short lists = 480;
         int allKid = teacherLP + teacherAS + teacherEA;
@@ -34,6 +34,57 @@ public class Main {
         System.out.println("На каждого ученика рассчитано " + task + " листов бумаги");
 
 
+
+
+        task4();
+        task5();
+    }
+    public static void task4() {
+        /**
+         * Производительность машины для изготовления бутылок — 16 бутылок за 2 минуты. Какая производительность машины будет:
+         *
+         * за 20 минут,
+         * в сутки,
+         * за 3 дня,
+         * за 1 месяц?
+         * Рассчитывайте продолжительность работы машины в том случае, если она работает без перерыва заданный промежуток времени.
+         *
+         * Результаты подсчетов выведите в консоль в формате: «За … машина произвела … штук бутылок».
+         *
+         * Для объявления переменных не используйте тип var.
+         */
+        System.out.println("Задача 4");
+        int perfomanceMachineinTwoMin = 16;
+       int perfomanceMachineinOneMin = perfomanceMachineinTwoMin / 2;
+       int perfomanceMachinein20Min = perfomanceMachineinOneMin * 20;
+       int perfomanceMachineinOneDay = perfomanceMachineinOneMin * 60 * 24;
+       int perfomanceMachinein3Day = perfomanceMachineinOneDay * 3;
+       int perfomanceMachineinOneMonth = perfomanceMachineinOneDay * 30;
+
+        System.out.println("За " + " 20 минут машина произвела " + perfomanceMachinein20Min + " штук бутылок");
+        System.out.println("За " + " сутки машина произвела " + perfomanceMachineinOneDay + " штук бутылок");
+        System.out.println("За " + " за 3 дня машина произвела " + perfomanceMachinein3Day + " штук бутылок");
+        System.out.println("За " + " за 1 месяц машина произвела " + perfomanceMachineinOneMonth + " штук бутылок");
+    }
+    public static void task5() {
+        /**
+         * На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой. На один класс уходит 2 банки белой и 4 банки коричневой краски. Сколько банок каждой краски было куплено?
+         *
+         * Выведите результат задачи в консоль в формате: «В школе, где … классов, нужно … банок белой краски и … банок коричневой краски».
+         *
+         * Для объявления переменных не используйте тип var.
+         */
+        System.out.println("Задача 5");
+
+        int totalColors = 120;
+        int whiteColorOnOneClass = 2;
+        int BrownColorOnneClass = 4;
+        int totalClass = totalColors / (whiteColorOnOneClass + BrownColorOnneClass);
+        int lotalWhite = whiteColorOnOneClass * totalClass;
+        int totalBrown = BrownColorOnneClass * totalClass;
+
+        String str = String.format("В школе, где %d классов, нужно %d банок белой краски и %d банок коричневой краски", totalClass, lotalWhite, totalBrown);
+        System.out.println(str);
 
     }
 }
